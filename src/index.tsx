@@ -4,13 +4,17 @@ import './index.css';
 import { Provider } from "react-redux";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import store from "./store/Store";
+import AuthenticationContainer from './containers/Login/Authentication.container';
 
 ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <Switch>
+          <Route exact path="/login" component={AuthenticationContainer} />
+          <Route exact path="/" component={App} />
+        </Switch>
       </Provider>
     </BrowserRouter>,
     document.getElementById("root") as HTMLElement
