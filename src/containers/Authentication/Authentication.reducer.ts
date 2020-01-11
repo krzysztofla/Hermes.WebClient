@@ -9,7 +9,21 @@ export const authenticationReducer = (state: IAuthenticationState = {
     switch (action.type) {
         case AuthenticationConstants.ON_LOGIN_SUCCESS:
             return {
-                ...state
+                ...state,
+                isUserLoggedIn: true,
+                user: action.user
+            }
+        case AuthenticationConstants.ON_LOGIN_ERROR:
+            return {
+                ...state,
+                isUserLoggedIn: false,
+                user: null
+            }
+        case AuthenticationConstants.ON_USER_LOGOUT:
+            return {
+                ...state,
+                isUserLoggedIn: false,
+                user: null
             }
         default:
             return state;

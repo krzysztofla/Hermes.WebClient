@@ -4,13 +4,17 @@ import createSagaMiddleware from 'redux-saga';
 import { IStoreState } from './IStore.state';
 import rootReducer from './RootReducer';
 import saga from './Saga';
+import { createLogger } from 'redux-logger';
 
 const composeEnhancers = composeWithDevTools({});
 const sagaMiddleware = createSagaMiddleware();
+const loggerMiddleware = createLogger();
 
 const middlewares = [
-    sagaMiddleware
+    sagaMiddleware,
+    loggerMiddleware
 ];
+
 
 let store: Store<IStoreState>;
 

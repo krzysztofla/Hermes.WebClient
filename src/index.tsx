@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import store from "./store/Store";
-import AuthenticationContainer from './containers/Login/Authentication.container';
+import AuthenticationContainer from './containers/Authentication/Authentication.container';
 
 ReactDOM.render(
     <BrowserRouter>

@@ -1,4 +1,4 @@
-import { IAuthenticationState } from '../containers/Login/Authentication.state';
+import { IAuthenticationState } from '../containers/Authentication/Authentication.state';
 export interface IStoreState {
     autheniticationState: IAuthenticationState
 }
