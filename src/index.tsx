@@ -2,23 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from "react-redux";
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import store from "./store/Store";
-import AuthenticationContainer from './containers/Authentication/Authentication.container';
+import MainViewport from './containers/MainViewPort/MainViewport.container';
 
 ReactDOM.render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <Switch>
-          <Route exact path="/login" component={AuthenticationContainer} />
-          <Route exact path="/" component={App} />
-        </Switch>
-      </Provider>
-    </BrowserRouter>,
-    document.getElementById("root") as HTMLElement
-  );
+  <BrowserRouter>
+    <Provider store={store}>
+      <MainViewport />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById("root") as HTMLElement
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

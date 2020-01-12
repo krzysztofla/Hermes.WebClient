@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 export interface IPrivateRoute {
-    component: Component
+    component: any
 
 }
 
