@@ -8,7 +8,6 @@ import {
 } from "./MainViewport.actions";
 import { translate } from "../../common/locales/i18next";
 import { Switch, Route } from "react-router-dom";
-import App from "./App";
 import AuthenticationContainer from "../Authentication/Authentication.container";
 
 
@@ -17,7 +16,7 @@ export class MainViewport extends React.Component<IMainViewportProps, {}> {
     return (
       <div className={"main-viewport"}>
         <Switch>
-          <Route exact path="/" component={App} />
+          <Route exact path="/" component={()=><div>Hello world</div>} />
           <Route exact path="/login" component={AuthenticationContainer} />
         </Switch>
       </div>
