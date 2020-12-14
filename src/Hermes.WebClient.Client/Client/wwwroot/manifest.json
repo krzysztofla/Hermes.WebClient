@@ -1,6 +1,6 @@
 {
-  "name": "Hermes.WebClient",
-  "short_name": "Hermes.WebClient",
+  "name": "Hermes.WebClient.Client",
+  "short_name": "Hermes.WebClient.Client",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
