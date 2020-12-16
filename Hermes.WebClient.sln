@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{438EA44D-455
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E94DB2B-0FD4-4F96-884C-848322BC4B46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hermes.WebClient.Client.Client", "src\Hermes.WebClient.Client\Client\Hermes.WebClient.Client.Client.csproj", "{2134F7EC-9F61-4B1E-B437-8B4DB57DF7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hermes.WebClient.Client", "src\Hermes.WebClient.Client\Client\Hermes.WebClient.Client.csproj", "{2134F7EC-9F61-4B1E-B437-8B4DB57DF7BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Hermes.WebClient.Client.Client.Models
+namespace Hermes.WebClient.Client.Models
 {
     public class RegisterModel
 {

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Hermes.WebClient.Client.Client.Models
+namespace Hermes.WebClient.Client.Models
 {
-    public class LoginModel
+    public class SignInModel
     {
         [Required]
         public string Email { get; set; }

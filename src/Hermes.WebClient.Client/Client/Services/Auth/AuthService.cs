@@ -8,11 +8,11 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
-using Hermes.WebClient.Client.Client.Models;
+using Hermes.WebClient.Client.Models;
 using System.Net.Http.Json;
-using Hermes.WebClient.Client.Client.Dto;
+using Hermes.WebClient.Client.Dto;
 
-namespace Hermes.WebClient.Client.Client.Services.Auth
+namespace Hermes.WebClient.Client.Services.Auth
 {
     public class AuthService : IAuthService
     {
@@ -34,10 +34,10 @@ namespace Hermes.WebClient.Client.Client.Services.Auth
             var result = await _httpClient.PostAsJsonAsync("api/accounts", registerModel);
         }
 
-        public async Task<LoginResultDto> Login(LoginModel loginModel)
+        public async Task<LoginResultDto> Login(SignInModel loginModel)
         {
             var loginAsJson = JsonSerializer.Serialize(loginModel);
-            var response = await _httpClient.PostAsync("api/Login", new StringContent(loginAsJson, Encoding.UTF8, "application/json"));
+            var response = await _httpClient.PostAsync("api/login", new StringContent(loginAsJson, Encoding.UTF8, "application/json"));
             var loginResult = JsonSerializer.Deserialize<LoginResultDto>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             if (!response.IsSuccessStatusCode)
@@ -45,9 +45,9 @@ namespace Hermes.WebClient.Client.Client.Services.Auth
                 return loginResult;
             }
 
-            await _localStorage.SetItemAsync("authToken", loginResult.Token);
+            await _localStorage.SetItemAsync("authToken", loginResult.AccessToken);
             ((ApiAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(loginModel.Email);
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", loginResult.Token);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", loginResult.AccessToken);
 
             return loginResult;
         }

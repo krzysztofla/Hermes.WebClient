@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Hermes.WebClient.Client.Client.Services.Auth
+namespace Hermes.WebClient.Client.Services.Auth
 {
     public class ApiAuthenticationStateProvider : AuthenticationStateProvider
     {
