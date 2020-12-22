@@ -1,50 +1,31 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html, body {
+html {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
-a, .btn-link {
-    color: #0366d6;
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+a:link {
+    color: #4894fe;
 }
 
-.content {
-    padding-top: 1.1rem;
+/* visited link */
+a:visited {
+    color: #4894fe;
 }
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+/* mouse over link */
+a:hover {
+    color: #4894fe;
 }
 
-.invalid {
-    outline: 1px solid red;
+/* selected link */
+a:active {
+    color: #4894fe;
 }
-
-.validation-message {
-    color: red;
-}
-
-#blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }

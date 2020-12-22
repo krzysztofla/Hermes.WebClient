@@ -1,26 +1,12 @@
 @inherits LayoutComponentBase
-
-<div class="page">
-<AuthorizeView>
-    <Authorized>
-    <div class="sidebar">
+<div class="grid-container">
+    <div class="Header">
         <NavMenu />
     </div>
-
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
+    <div class="Main-Page">
+        @Body
     </div>
-        </Authorized>
-    <NotAuthorized>
-                <div>
-            <Login />
-        </div>
-    </NotAuthorized>
-</AuthorizeView>
+    <div class="Footer">
+        Footer
+    </div>
 </div>
