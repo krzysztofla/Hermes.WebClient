@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 15% 9.44% 9.44% 9.44% 9.44% 9.44% 9.44% 9.44% 9.44% 9.44%;
     grid-template-rows: 5% 11.25% 11.25% 11.25% 11.25% 11.25% 11.25% 11.25% 11.25% 5%;
+
     gap: 0px 0px;
     grid-template-areas:
         "Header Header Header Header Header Header Header Header Header Header"
@@ -27,6 +28,7 @@
     grid-area: Header;
     color: #fff;
     background-color:#000;
+    height: 40px;
 }
 
 .Footer {
