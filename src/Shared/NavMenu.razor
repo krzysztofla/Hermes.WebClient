@@ -1,10 +1,8 @@
 ﻿<div>
-    <div class="navbar-toggler" @onclick="ToggleNavMenu">
-        <svg viewBox="0 0 100 80" width="20" height="20" fill="#1c1c1c">
-            <rect width="100" height="20"></rect>
-            <rect y="30" width="100" height="20"></rect>
-            <rect y="60" width="100" height="20"></rect>
-        </svg>
+    <div class="@NavMenuTogglerCssClass">
+        <div class="navbar-toggler" @onclick="ToggleNavMenu">
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
     <div class="@NavMenuCssClass">
         <ul class="nav flex-column">
@@ -30,7 +28,8 @@
 @code {
     private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "Sidebar" : "Sidebar-collapse";
+    private string NavMenuCssClass => collapseNavMenu ? "Sidebar-collapse" : "Sidebar";
+    private string NavMenuTogglerCssClass => collapseNavMenu ? "toggler-container-collapsed" : "toggler-container-open";
 
     private void ToggleNavMenu()
     {

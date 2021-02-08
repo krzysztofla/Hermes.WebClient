@@ -29,6 +29,10 @@
     color: #fff;
     background-color:#000;
     height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
 }
 
 .Footer {
@@ -37,4 +41,5 @@
 
 .Main-Page {
     grid-area: Main-Page;
+    padding: 30px;
 }
